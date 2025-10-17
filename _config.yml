@@ -1,0 +1,30 @@
+# GitHub Pages Configuration
+
+# Theme: None (using custom HTML/CSS)
+theme: null
+
+# Exclude files from being published
+exclude:
+  - README.md
+  - .gitignore
+  - .git
+
+# Site settings (optional but recommended for SEO)
+title: Mahitek 3D Lab MX
+description: Impresión 3D profesional para tu negocio. Prototipos, piezas personalizadas y soluciones innovadoras de manufactura aditiva.
+lang: es
+url: https://dtcsrni.github.io
+baseurl: /Mahitek_3D_Lab_MX_Landing
+
+# Social media
+social:
+  - name: Facebook
+    url: https://facebook.com/mahitek3d
+  - name: Instagram
+    url: https://instagram.com/mahitek3d
+  - name: Twitter
+    url: https://twitter.com/mahitek3d
+
+# SEO settings
+keywords: impresión 3D, manufactura aditiva, prototipos, México, piezas personalizadas
+author: Mahitek 3D Lab MX
