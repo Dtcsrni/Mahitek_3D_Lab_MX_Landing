@@ -8,6 +8,9 @@ yarn-error.log*
 dist/
 build/
 .cache/
+_site/
+vendor/
+docs/vendor/
 
 # Environment variables
 .env

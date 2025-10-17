@@ -1,0 +1,16 @@
+name: Link Checker
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run lychee
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --no-progress --timeout 20 --retry-wait-time 5 docs/**/*.md docs/**/*.html docs/**/*.yml docs/**/*.yaml README.md

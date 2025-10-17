@@ -1,0 +1,22 @@
+title: "Mahitek 3D Lab"
+description: "Impresión 3D funcional en PETG. Tiradas cortas y personalización."
+lang: es-MX
+url: https://usuario.github.io
+baseurl: /Mahitek_3D_Lab_MX_Landing
+remote_theme: pages-themes/slate@v0.2.0
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+sass:
+  style: compressed
+  sass_dir: _sass
+include:
+  - assets/css
+  - js
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+      permalink: pretty
