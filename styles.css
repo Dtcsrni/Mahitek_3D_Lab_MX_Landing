@@ -1,0 +1,6 @@
+/*
+ * Legacy compatibility stylesheet.
+ * The GitHub Pages site now lives under docs/ with the Slate theme and Space Grotesk typography.
+ * This file remains so merges from branches expecting styles.css do not conflict; it simply delegates to the new bundle.
+ */
+@import url("./docs/assets/css/style.css");
