@@ -9,24 +9,27 @@
 
 :root {
     /* Primary Colors */
-    --primary-color: #2196F3;
-    --primary-dark: #1976D2;
-    --primary-light: #BBDEFB;
-    
+    --primary-color: #64B5F6;
+    --primary-dark: #1E88E5;
+    --primary-light: #90CAF9;
+
     /* Secondary Colors */
-    --secondary-color: #4CAF50;
-    --secondary-dark: #388E3C;
-    
+    --secondary-color: #26A69A;
+    --secondary-dark: #00897B;
+
     /* Accent Colors */
-    --accent-color: #FF9800;
-    --accent-dark: #F57C00;
-    
+    --accent-color: #FFB74D;
+    --accent-dark: #FB8C00;
+
     /* Neutral Colors */
-    --dark: #212121;
-    --dark-gray: #424242;
-    --gray: #757575;
-    --light-gray: #E0E0E0;
-    --lighter-gray: #F5F5F5;
+    --background: #0B1120;
+    --background-alt: #111C2D;
+    --surface: #17233F;
+    --surface-alt: #1F2E4D;
+    --text-primary: #E2E8F0;
+    --text-secondary: #C7D2FE;
+    --text-muted: #94A3B8;
+    --border-color: rgba(148, 163, 184, 0.3);
     --white: #FFFFFF;
     
     /* Spacing */
@@ -58,8 +61,8 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: var(--dark);
-    background-color: var(--white);
+    color: var(--text-primary);
+    background-color: var(--background);
 }
 
 .container {
@@ -90,13 +93,13 @@ h4 { font-size: 1.25rem; }
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: var(--spacing-sm);
-    color: var(--dark);
+    color: var(--text-primary);
 }
 
 .section-subtitle {
     text-align: center;
     font-size: 1.125rem;
-    color: var(--gray);
+    color: var(--text-muted);
     margin-bottom: var(--spacing-lg);
 }
 
@@ -150,7 +153,7 @@ h4 { font-size: 1.25rem; }
    Navigation
    =========================== */
 .navbar {
-    background-color: var(--white);
+    background-color: var(--background-alt);
     box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
@@ -179,7 +182,7 @@ h4 { font-size: 1.25rem; }
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--dark);
+    color: var(--text-primary);
     font-weight: 500;
     transition: var(--transition);
 }
@@ -198,7 +201,7 @@ h4 { font-size: 1.25rem; }
 .hamburger span {
     width: 25px;
     height: 3px;
-    background-color: var(--dark);
+    background-color: var(--text-primary);
     border-radius: 2px;
     transition: var(--transition);
 }
@@ -273,7 +276,7 @@ h4 { font-size: 1.25rem; }
    Features Section
    =========================== */
 .features {
-    background-color: var(--lighter-gray);
+    background-color: var(--background-alt);
 }
 
 .features-grid {
@@ -283,7 +286,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .feature-card {
-    background-color: var(--white);
+    background-color: var(--surface);
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     text-align: center;
@@ -302,19 +305,19 @@ h4 { font-size: 1.25rem; }
 }
 
 .feature-card h3 {
-    color: var(--dark);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-xs);
 }
 
 .feature-card p {
-    color: var(--gray);
+    color: var(--text-muted);
 }
 
 /* ===========================
    Services Section
    =========================== */
 .services {
-    background-color: var(--white);
+    background-color: var(--background);
 }
 
 .services-grid {
@@ -324,7 +327,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .service-card {
-    background-color: var(--lighter-gray);
+    background-color: var(--surface);
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     transition: var(--transition);
@@ -342,7 +345,7 @@ h4 { font-size: 1.25rem; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--white);
+    background-color: var(--background-alt);
     border-radius: var(--radius-md);
 }
 
@@ -352,12 +355,12 @@ h4 { font-size: 1.25rem; }
 }
 
 .service-card h3 {
-    color: var(--dark);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-sm);
 }
 
 .service-card p {
-    color: var(--gray);
+    color: var(--text-muted);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -368,7 +371,7 @@ h4 { font-size: 1.25rem; }
 
 .service-list li {
     padding: var(--spacing-xs);
-    color: var(--dark-gray);
+    color: var(--text-secondary);
 }
 
 .service-list li::before {
@@ -382,7 +385,7 @@ h4 { font-size: 1.25rem; }
    Products Section
    =========================== */
 .products {
-    background-color: var(--lighter-gray);
+    background-color: var(--background-alt);
 }
 
 .products-grid {
@@ -393,7 +396,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .product-card {
-    background-color: var(--white);
+    background-color: var(--surface);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
@@ -409,7 +412,7 @@ h4 { font-size: 1.25rem; }
     position: relative;
     width: 100%;
     height: 250px;
-    background-color: var(--lighter-gray);
+    background-color: var(--background);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -437,19 +440,19 @@ h4 { font-size: 1.25rem; }
 }
 
 .product-info h3 {
-    color: var(--dark);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-xs);
 }
 
 .product-sku {
     font-size: 0.875rem;
-    color: var(--gray);
+    color: var(--text-muted);
     margin-bottom: var(--spacing-xs);
     font-family: monospace;
 }
 
 .product-description {
-    color: var(--dark-gray);
+    color: var(--text-secondary);
     margin-bottom: var(--spacing-sm);
     font-size: 0.875rem;
 }
@@ -469,27 +472,27 @@ h4 { font-size: 1.25rem; }
 
 .price-unit {
     font-size: 0.875rem;
-    color: var(--gray);
+    color: var(--text-muted);
 }
 
 .products-cta {
     text-align: center;
     padding: var(--spacing-lg);
-    background-color: var(--white);
+    background-color: var(--surface-alt);
     border-radius: var(--radius-lg);
 }
 
 .products-cta p {
     font-size: 1.25rem;
     margin-bottom: var(--spacing-sm);
-    color: var(--dark);
+    color: var(--text-primary);
 }
 
 /* ===========================
    About Section
    =========================== */
 .about {
-    background-color: var(--white);
+    background-color: var(--background);
 }
 
 .about-content {
@@ -500,7 +503,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .about-text p {
-    color: var(--dark-gray);
+    color: var(--text-secondary);
     margin-bottom: var(--spacing-sm);
     font-size: 1.125rem;
 }
@@ -515,7 +518,7 @@ h4 { font-size: 1.25rem; }
     flex: 1;
     text-align: center;
     padding: var(--spacing-sm);
-    background-color: var(--lighter-gray);
+    background-color: var(--surface-alt);
     border-radius: var(--radius-md);
 }
 
@@ -530,7 +533,7 @@ h4 { font-size: 1.25rem; }
 .stat-label {
     display: block;
     font-size: 0.875rem;
-    color: var(--gray);
+    color: var(--text-muted);
 }
 
 .about-image {
@@ -549,7 +552,7 @@ h4 { font-size: 1.25rem; }
    Contact Section
    =========================== */
 .contact {
-    background-color: var(--lighter-gray);
+    background-color: var(--background-alt);
 }
 
 .contact-content {
@@ -559,7 +562,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .contact-form {
-    background-color: var(--white);
+    background-color: var(--surface);
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
@@ -573,7 +576,7 @@ h4 { font-size: 1.25rem; }
     display: block;
     margin-bottom: var(--spacing-xs);
     font-weight: 600;
-    color: var(--dark);
+    color: var(--text-primary);
 }
 
 .form-group input,
@@ -581,11 +584,18 @@ h4 { font-size: 1.25rem; }
 .form-group textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 2px solid var(--light-gray);
+    border: 2px solid var(--border-color);
     border-radius: var(--radius-md);
     font-size: 1rem;
     font-family: inherit;
     transition: var(--transition);
+    background-color: var(--background);
+    color: var(--text-primary);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
 }
 
 .form-group input:focus,
@@ -607,7 +617,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .info-card {
-    background-color: var(--white);
+    background-color: var(--surface);
     padding: var(--spacing-sm);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
@@ -616,11 +626,11 @@ h4 { font-size: 1.25rem; }
 .info-card h3 {
     font-size: 1rem;
     margin-bottom: var(--spacing-xs);
-    color: var(--dark);
+    color: var(--text-primary);
 }
 
 .info-card p {
-    color: var(--dark-gray);
+    color: var(--text-secondary);
     font-size: 0.875rem;
 }
 
@@ -635,7 +645,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .qr-section {
-    background-color: var(--white);
+    background-color: var(--surface);
     padding: var(--spacing-sm);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
@@ -645,17 +655,17 @@ h4 { font-size: 1.25rem; }
 .qr-section h3 {
     font-size: 1rem;
     margin-bottom: var(--spacing-sm);
-    color: var(--dark);
+    color: var(--text-primary);
 }
 
 .qr-code {
     width: 150px;
     height: 150px;
     margin: 0 auto var(--spacing-xs);
-    border: 2px solid var(--light-gray);
+    border: 2px solid var(--border-color);
     border-radius: var(--radius-md);
     padding: var(--spacing-xs);
-    background-color: var(--white);
+    background-color: var(--background);
 }
 
 .qr-code svg {
@@ -665,15 +675,15 @@ h4 { font-size: 1.25rem; }
 
 .qr-caption {
     font-size: 0.75rem;
-    color: var(--gray);
+    color: var(--text-muted);
 }
 
 /* ===========================
    Footer
    =========================== */
 .footer {
-    background-color: var(--dark);
-    color: var(--white);
+    background-color: var(--background-alt);
+    color: var(--text-primary);
     padding: var(--spacing-lg) 0 var(--spacing-md);
 }
 
@@ -690,13 +700,13 @@ h4 { font-size: 1.25rem; }
 }
 
 .footer-brand p {
-    color: var(--light-gray);
+    color: var(--text-muted);
 }
 
 .footer-links h4,
 .footer-social h4 {
     margin-bottom: var(--spacing-sm);
-    color: var(--white);
+    color: var(--text-primary);
 }
 
 .footer-links ul {
@@ -708,7 +718,7 @@ h4 { font-size: 1.25rem; }
 }
 
 .footer-links a {
-    color: var(--light-gray);
+    color: var(--text-muted);
     text-decoration: none;
     transition: var(--transition);
 }
@@ -728,11 +738,12 @@ h4 { font-size: 1.25rem; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--dark-gray);
+    background-color: var(--surface-alt);
     border-radius: 50%;
     text-decoration: none;
     font-size: 1.25rem;
     transition: var(--transition);
+    color: var(--text-primary);
 }
 
 .social-links a:hover {
@@ -741,19 +752,19 @@ h4 { font-size: 1.25rem; }
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--dark-gray);
+    border-top: 1px solid var(--border-color);
     padding-top: var(--spacing-sm);
     text-align: center;
 }
 
 .footer-bottom p {
-    color: var(--light-gray);
+    color: var(--text-muted);
     font-size: 0.875rem;
     margin-bottom: 0.25rem;
 }
 
 .footer-note {
-    color: var(--gray);
+    color: var(--text-muted);
     font-size: 0.75rem;
 }
 
@@ -793,7 +804,7 @@ h4 { font-size: 1.25rem; }
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--white);
+        background-color: var(--surface);
         flex-direction: column;
         padding: var(--spacing-sm);
         box-shadow: var(--shadow-md);
