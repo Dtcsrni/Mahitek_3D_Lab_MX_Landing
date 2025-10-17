@@ -1,169 +1,62 @@
-# Mahitek 3D Lab MX - Landing Page
+# Mahitek 3D Lab — Landing PETG
 
-Página de aterrizaje profesional para validar productos físicos impresos en 3D y convertir tráfico en ventas. Incluye fichas SKU, enlaces con parámetros UTM, materiales visuales y QR dinámicos para campañas. Optimizado para bazares, redes sociales y marketplaces, con enfoque en margen, conversión y trazabilidad por lote.
+Landing one-page alojada en `docs/` y montada con el tema remoto `pages-themes/slate`. Todo el contenido clave (canales, catálogo y estilos) se alimenta desde `_data` y `_sass` para garantizar consistencia cuando se agregan productos o se ajustan precios.
 
-## 🚀 Características
+## 📌 Resumen
+- Tema oscuro con glassmorphism sobre paleta obsidiana/verde/violeta y tipografía Space Grotesk global.
+- Catálogo automático: los primeros 8 SKUs se renderizan desde `_data/productos.yaml` con imágenes WebP optimizadas.
+- CTAs únicos hacia Instagram y Facebook con UTM dinámicos y banner cuando la visita proviene de QR.
+- Workflows de GitHub Actions para compilar Jekyll y ejecutar Lychee en los enlaces críticos.
 
-- ✅ **Diseño Responsive**: Optimizado para móvil, tablet y escritorio
-- ✅ **SEO Optimizado**: Meta tags completos y Open Graph para redes sociales
-- ✅ **Seguimiento UTM**: Parámetros UTM integrados para tracking de campañas
-- ✅ **Catálogo de Productos**: Con SKU, precios y llamadas a la acción
-- ✅ **Formulario de Contacto**: Integrado con validación de campos
-- ✅ **Accesibilidad**: Siguiendo las mejores prácticas WCAG
-- ✅ **Rendimiento**: Código optimizado sin dependencias externas
-
-## 📁 Estructura del Proyecto
+## 🧮 Fórmula de coste
+Para cotizaciones rápidas usamos:
 
 ```
-Mahitek_3D_Lab_MX_Landing/
-├── index.html          # Página principal
-├── styles.css          # Estilos CSS
-├── script.js           # JavaScript interactivo
-├── favicon.svg         # Icono del sitio
-├── _config.yml         # Configuración de GitHub Pages
-├── .gitignore          # Archivos a ignorar
-└── README.md           # Este archivo
+coste = (peso_g × tarifa_material) + (tiempo_h × tarifa_maquina) + postprocesos + empaque
 ```
 
-## 🌐 Despliegue en GitHub Pages
+- **Tarifa material PETG**: $0.43/g (incluye merma)
+- **Tarifa máquina Ender 3 V3**: $28/h
+- **Postprocesos**: limpieza base incluida; extras se añaden según alcance
+- **Empaque**: físico $1.44–$1.64, online $2.08–$2.28 (ver detalles en la sección “Calidad y empaque”)
 
-### Opción 1: Activar GitHub Pages (Recomendado)
+## ⚙️ Parámetros Ender 3 V3
+- **PETG**: boquilla 240–250 °C · cama 80–85 °C · fan 30–50 % · velocidad 40–60 mm/s · superficie PEI
+- **PLA**: boquilla 195–210 °C · cama 50–60 °C · fan 100 % · velocidad 50–70 mm/s · superficie PEI
 
-1. Ve a **Settings** → **Pages** en tu repositorio
-2. En **Source**, selecciona la rama `main` o `copilot/add-landing-page-for-mipyme`
-3. Haz clic en **Save**
-4. Tu sitio estará disponible en: `https://dtcsrni.github.io/Mahitek_3D_Lab_MX_Landing/`
+Estos perfiles están documentados en la landing para reforzar transparencia y repetibilidad en tiradas cortas.
 
-### Opción 2: Vista Local
+## 🗂️ Contenido principal
+- `docs/_config.yml`: configuración del sitio, plugins y tema remoto
+- `docs/_data/canales.yaml`: URLs oficiales y UTM base
+- `docs/_data/productos.yaml`: catálogo (12+ SKUs con PETG por defecto y PLA cuando conviene)
+- `docs/assets/css/style.scss` + `_sass/`: tokens y overrides del tema
+- `docs/js/utm.js`: añade parámetros UTM a CTAs y bandera `from-qr`
+- `docs/js/catalogo.js`: pinta el grid de productos desde `window.PRODUCTOS`
+- `docs/index.md`: secciones de la landing (Hero, Valor, Destacados, Personalización, Calidad y empaque, Precios guía, FAQs, Contacto)
 
-Para ver el sitio localmente:
+## 🚀 Despliegue en GitHub Pages
+1. En **Settings → Pages**, selecciona la rama `main` y el folder `/docs`.
+2. Ajusta `docs/_config.yml` si tu usuario o nombre de repositorio cambian (`url` y `baseurl`).
+3. Guarda los cambios y espera a que termine el workflow **Build and Deploy GitHub Pages**.
+4. La landing quedará disponible en `https://usuario.github.io/Mahitek_3D_Lab_MX_Landing/` (actualiza según tu cuenta).
 
+## 🔁 Workflows
+- `.github/workflows/pages.yml`: compila el sitio con Jekyll antes de desplegar.
+- `.github/workflows/link-check.yml`: ejecuta [Lychee](https://github.com/lycheeverse/lychee) semanalmente para validar enlaces.
+
+## 🔗 Enlaces oficiales
+- Landing: `https://usuario.github.io/Mahitek_3D_Lab_MX_Landing/`
+- Instagram: [@mahitek_3d_lab_mx](https://www.instagram.com/mahitek_3d_lab_mx/)
+- Facebook: [Mahitek 3D Lab MX](https://www.facebook.com/mahitek3dlabmx)
+
+## 🧑‍💻 Desarrollo local
 ```bash
-# Usando Python 3
-python3 -m http.server 8000
-
-# O usando Node.js
-npx http-server
+bundle install --path vendor/bundle # primera vez
+bundle exec jekyll serve --source docs --livereload
 ```
 
-Luego abre tu navegador en `http://localhost:8000`
-
-## 📊 Tracking y Analytics
-
-### Parámetros UTM Implementados
-
-La página incluye tracking UTM en todos los enlaces importantes:
-
-- **Hero CTA**: `utm_source=hero&utm_medium=button&utm_campaign=cotizar`
-- **Productos**: `utm_source=productos&utm_medium=card&utm_campaign={producto}&sku={SKU}`
-- **Diseño Personalizado**: `utm_source=productos&utm_medium=button&utm_campaign=personalizado`
-
-### SKU de Productos
-
-- **MHKT-PC-001**: Porta Celular - $250 MXN
-- **MHKT-MG-002**: Maceta Geométrica - $180 MXN
-- **MHKT-OE-003**: Organizador Escritorio - $320 MXN
-
-## 🎨 Personalización
-
-### Colores
-
-Los colores principales están definidos en `styles.css` como variables CSS:
-
-```css
-:root {
-    --primary-color: #2196F3;    /* Azul principal */
-    --secondary-color: #4CAF50;  /* Verde secundario */
-    --accent-color: #FF9800;     /* Naranja de acento */
-}
-```
-
-### Contenido
-
-Edita `index.html` para:
-- Cambiar textos y descripciones
-- Actualizar información de contacto
-- Agregar/modificar productos
-- Personalizar servicios
-
-### Formulario de Contacto
-
-El formulario está configurado para usar Formspree. Para activarlo:
-
-1. Regístrate en [Formspree](https://formspree.io)
-2. Crea un nuevo formulario
-3. Reemplaza `YOUR_FORM_ID` en `index.html` línea 305:
-
-```html
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-```
-
-## 📱 Integración de Redes Sociales
-
-Actualiza los enlaces de redes sociales en el footer (línea 443-446):
-
-```html
-<a href="https://facebook.com/tu-pagina" target="_blank">📘</a>
-<a href="https://instagram.com/tu-cuenta" target="_blank">📷</a>
-<a href="https://twitter.com/tu-cuenta" target="_blank">🐦</a>
-<a href="https://linkedin.com/company/tu-empresa" target="_blank">💼</a>
-```
-
-## 🔧 Mantenimiento
-
-### Actualizar Productos
-
-Para agregar un nuevo producto, copia esta estructura en la sección de productos:
-
-```html
-<div class="product-card">
-    <div class="product-image">
-        <div class="product-badge">Nuevo</div>
-        <!-- SVG o imagen del producto -->
-    </div>
-    <div class="product-info">
-        <h3>Nombre del Producto</h3>
-        <p class="product-sku">SKU: MHKT-XX-XXX</p>
-        <p class="product-description">Descripción breve</p>
-        <div class="product-price">
-            <span class="price">$XXX</span>
-            <span class="price-unit">MXN</span>
-        </div>
-        <a href="#contacto?utm_source=productos&utm_medium=card&utm_campaign=nombre&sku=MHKT-XX-XXX" class="btn btn-small">Solicitar</a>
-    </div>
-</div>
-```
-
-## 📈 Mejoras Futuras Sugeridas
-
-- [ ] Integrar Google Analytics o Facebook Pixel
-- [ ] Agregar galería de imágenes reales de productos
-- [ ] Implementar generación dinámica de códigos QR
-- [ ] Agregar testimonios de clientes
-- [ ] Crear blog o sección de casos de éxito
-- [ ] Integrar carrito de compras
-- [ ] Agregar chat en vivo (WhatsApp Business)
-
-## 🤝 Contribuciones
-
-Este proyecto está abierto a mejoras. Para contribuir:
-
-1. Haz fork del repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit tus cambios (`git commit -am 'Agrega nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abre un Pull Request
+El sitio quedará disponible en `http://localhost:4000/Mahitek_3D_Lab_MX_Landing/`.
 
 ## 📄 Licencia
-
-Este proyecto está bajo la licencia MIT. Ver archivo LICENSE para más detalles.
-
-## 📞 Contacto
-
-Para soporte o consultas sobre este proyecto, contacta a:
-- Email: contacto@mahitek3d.mx
-- WhatsApp: +52 XXX XXX XXXX
-
----
-
-**Hecho con ❤️ para emprendedores y Mipymes en México**
+Proyecto bajo licencia MIT.

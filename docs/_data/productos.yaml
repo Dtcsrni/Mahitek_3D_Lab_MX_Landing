@@ -1,0 +1,104 @@
+- id: quetzal-keyring-v1
+  nombre: Llavero Quetzalcóatl
+  material: PETG
+  peso_g: 14
+  tiempo_h: 1.2
+  pvp_mxn: {fisico: 30, online: 35}
+  imagen: https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: aro 5.3 cm; negro/transparente
+- id: xolo-lampara-v2
+  nombre: Lámpara Xolo Mini
+  material: PETG
+  peso_g: 110
+  tiempo_h: 6.5
+  pvp_mxn: {fisico: 420, online: 460}
+  imagen: https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: luz cálida USB-C; difusor translúcido
+- id: engrane-custom-v1
+  nombre: Engrane modular 32T
+  material: PETG
+  peso_g: 38
+  tiempo_h: 2.9
+  pvp_mxn: {fisico: 95, online: 110}
+  imagen: https://images.unsplash.com/photo-1617083988596-a5f5c0da5a0d?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: pitch 6 mm; color grafito
+- id: rack-wall-v1
+  nombre: Rack mural para controles
+  material: PETG
+  peso_g: 62
+  tiempo_h: 3.7
+  pvp_mxn: {fisico: 180, online: 210}
+  imagen: https://images.unsplash.com/photo-1580894897200-8e1d5f7d6d5d?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: 4 slots; incluye tornillería
+- id: holder-multitool-v1
+  nombre: Organizador multiherramienta
+  material: PETG
+  peso_g: 54
+  tiempo_h: 3.1
+  pvp_mxn: {fisico: 160, online: 185}
+  imagen: https://images.unsplash.com/photo-1529927452307-8d8e57365b86?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: 6 compartimentos; superficie texturizada
+- id: clip-cable-v2
+  nombre: Clip para cables 12 mm
+  material: PETG
+  peso_g: 8
+  tiempo_h: 0.9
+  pvp_mxn: {fisico: 28, online: 32}
+  imagen: https://images.unsplash.com/photo-1576153192621-5efc8c0b65c7?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: pack x6; resiste 85 °C
+- id: drone-arm-v1
+  nombre: Brazo dron FPV 5"
+  material: PETG
+  peso_g: 46
+  tiempo_h: 2.4
+  pvp_mxn: {fisico: 210, online: 240}
+  imagen: https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: refuerzo fibra interna
+- id: sensor-case-v1
+  nombre: Carcasa sensor IoT
+  material: PETG
+  peso_g: 52
+  tiempo_h: 3.4
+  pvp_mxn: {fisico: 175, online: 205}
+  imagen: https://images.unsplash.com/photo-1603732551658-5fabbafa84fb?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: compatible ESP32; IP54
+- id: matriz-led-v1
+  nombre: Chasis matriz LED 8x32
+  material: PETG
+  peso_g: 88
+  tiempo_h: 4.8
+  pvp_mxn: {fisico: 240, online: 270}
+  imagen: https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: difusor intercambiable
+- id: pla-mini-planter-v1
+  nombre: Maceta mini PLA seda
+  material: PLA
+  peso_g: 26
+  tiempo_h: 1.6
+  pvp_mxn: {fisico: 85, online: 95}
+  imagen: https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: colores metálicos
+- id: pla-badge-v1
+  nombre: Pin personalizado PLA
+  material: PLA
+  peso_g: 12
+  tiempo_h: 0.8
+  pvp_mxn: {fisico: 45, online: 55}
+  imagen: https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: incluye broche magnético
+- id: pla-prop-v1
+  nombre: Props cosplay PLA
+  material: PLA
+  peso_g: 68
+  tiempo_h: 3.9
+  pvp_mxn: {fisico: 210, online: 240}
+  imagen: https://images.unsplash.com/photo-1570813099241-91bcf15f2f2b?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: listo para pintar
+- id: petg-bracket-v1
+  nombre: Soporte estructural PETG
+  material: PETG
+  peso_g: 74
+  tiempo_h: 4.1
+  pvp_mxn: {fisico: 190, online: 220}
+  imagen: https://images.unsplash.com/photo-1516117172878-fd2c41f4a759?auto=format&fit=crop&w=640&q=70&fm=webp
+  notas: refuerzos 45°; montaje M5
